@@ -1,0 +1,6 @@
+<div class="ticket-display">
+  <h3>Ticket Status</h3>
+    <p *ngIf="soldOut">Tickets are sold out!</p>
+    <p *ngIf="!soldOut">{{ ticketsRemaining }} tickets in the pool available to buy</p>
+  <canvas id="ticketChart" width="400" height="200"></canvas>
+</div>

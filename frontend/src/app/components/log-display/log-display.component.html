@@ -1,0 +1,11 @@
+<div class="log-display">
+  <h3>Logs</h3>
+  <div *ngIf="logs && logs.length > 0">
+    <ul>
+      <li *ngFor="let log of logs">{{ log }}</li>
+    </ul>
+  </div>
+  <div *ngIf="!logs || logs.length === 0" class="no-logs">
+    <p>No logs available.</p>
+  </div>
+</div>

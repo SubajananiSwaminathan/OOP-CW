@@ -1,0 +1,46 @@
+<div class="control-panel">
+  <h2>Control Panel</h2>
+
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div class="input-group">
+    <label for="vendorCount">Number of Vendors to Start:</label>
+    <input type="number" id="vendorCount" [(ngModel)]="vendorCount" min="1" placeholder="Enter number of vendors">
+
+    <label for="ticketsPerRelease">Tickets per Vendor Release:</label>
+    <input type="number" id="ticketsPerRelease" [(ngModel)]="ticketsPerRelease" min="1" placeholder="Enter tickets per release">
+  </div>
+
+  <div class="input-group">
+    <label for="customerCount">Number of Customers to Start:</label>
+    <input type="number" id="customerCount" [(ngModel)]="customerCount" min="1" placeholder="Enter number of customers">
+
+    <label for="ticketsPerPurchase">Tickets per Customer Purchase:</label>
+    <input type="number" id="ticketsPerPurchase" [(ngModel)]="ticketsPerPurchase" min="1" placeholder="Enter tickets per purchase">
+  </div>
+
+  <div class="button-container">
+    <div class="vendor-buttons">
+      <h3>Vendor Controls</h3>
+      <button (click)="startVendor()" [disabled]="vendorRunning">Start Vendor Threads</button>
+      <button (click)="stopVendor()" [disabled]="!vendorRunning">Stop Vendor Threads</button>
+      <button (click)="addVendor()">Add Vendor</button>
+      <button (click)="removeVendor()">Remove Vendor</button>
+    </div>
+
+    <div class="customer-buttons">
+      <h3>Customer Controls</h3>
+      <button (click)="startCustomer()" [disabled]="customerRunning">Start Customer Threads</button>
+      <button (click)="stopCustomer()" [disabled]="!customerRunning">Stop Customer Threads</button>
+      <button (click)="addCustomer()">Add Customer</button>
+      <button (click)="removeCustomer()">Remove Customer</button>
+    </div>
+  </div>
+
+  <div class="status">
+    <p>Vendor Running: {{ vendorRunning ? 'Yes' : 'No' }}</p>
+    <p>Customer Running: {{ customerRunning ? 'Yes' : 'No' }}</p>
+  </div>
+</div>

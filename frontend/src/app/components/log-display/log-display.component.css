@@ -1,0 +1,36 @@
+.log-display {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 45%;
+  max-height: 600px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  position: absolute;
+  margin-top: 500px;
+  right: 20px;
+}
+
+.log-display h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.log-display ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.log-display li {
+  margin: 5px 0;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.no-logs p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+}
